@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<header th:replace="~{cabecalho :: head('Detalhes do carro')}"></header>
+<body>
+	<nav th:replace="~{menu :: nav}"></nav>
+	<div class="container">
+		<h3 class="text-center">Detalhes do carro</h3>
+		<form action="/carro" method="POST">
+			<div class="row">
+				<div class="col-md-6">
+					<div class="input-group mb-3 input-group-sm">
+						<span class="input-group-text">Marca</span> <input type="text"
+							th:placeholder="${carro.marca}" readonly class="form-control">
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="input-group mb-3 input-group-sm">
+						<span class="input-group-text">Modelo</span> <input type="text"
+							th:placeholder="${carro.modelo}" readonly class="form-control">
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-6">
+					<div class="input-group mb-3 input-group-sm">
+						<span class="input-group-text">Valor</span> <input type="text"
+							readonly th:placeholder="${carro.valor}" class="form-control">
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="input-group mb-3 input-group-sm">
+						<span class="input-group-text">Potencia cavalaria</span> <input
+							type="text" th:placeholder="${carro.potenciaCavalaria}" readonly
+							class="form-control">
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-6">
+					<div class="input-group mb-3 input-group-sm">
+						<span class="input-group-text">Cor</span> <input type="text"
+							th:placeholder="${carro.cor}" readonly class="form-control">
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="input-group mb-3 input-group-sm">
+						<span class="input-group-text">Ano</span> <input
+							type="text" th:placeholder="${carro.ano}" readonly
+							class="form-control">
+					</div>
+				</div>
+			</div>
+		</form>
+		<div class="row">
+			<div class="col-md-12">
+				<a href="/produtos">Voltar</a>
+			</div>
+
+		</div>
+	</div>
+</body>
+</html>

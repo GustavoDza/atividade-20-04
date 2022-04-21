@@ -1,0 +1,41 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-spring4-4.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+
+<header th:replace="~{cabecalho :: head('Listar Carros')}"></header>
+<body>
+<nav th:replace="~{menu :: nav}"></nav>
+	<div class="container mt-3">
+		<a type="button" class="btn btn-primary" href='/carro/criar'>cadastrar</a>
+		<h3>Cadastro de carros</h3>
+		<table id="tbCarro" class="table table-bordered table-sm">
+			<thead>
+				<tr>
+					<th>Marca</th>
+					<th>Modelo</th>
+					<th>Valor</th>
+					<th>Potência Cavalaria</th>
+					<th>Cor</th>
+					<th>Ano</th>
+					<th>Edição</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr th:each="carro : ${listarCarros}">
+					<td th:text="${carro.getMarca()}">Marca</td>
+					<td th:text="${carro.getModelo()}">Modelo</td>
+					<td th:text="${carro.getValor()}">Valor</td>
+					<td th:text="${carro.getPotenciaCavalaria()}">Potência Cavalaria</td>
+					<td th:text="${carro.getCor()}">Cor</td>
+					<td th:text="${carro.getAno()}">Ano</td>
+					<td>
+	 <a th:href="@{/produtos/{produtoId}(produtoId = ${produto.id})}" class="btn btn-info"> Detalhes</a>
+					<a href="#" class="btn btn-warning"> Editar</a> <a
+						href="#" class="btn btn-danger"> Deletar</a>
+						</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</body>
+</html>
