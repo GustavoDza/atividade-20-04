@@ -1,0 +1,7 @@
+br\com\fiap\appcarro\carro\dto\CarroDto.class
+br\com\fiap\appcarro\carro\CarroApplication.class
+br\com\fiap\appcarro\carro\controller\CarroController.class
+br\com\fiap\appcarro\model\Carro.class
+br\com\fiap\appcarro\carro\config\SpringConfig.class
+br\com\fiap\appcarro\repository\CarroRepository.class
+br\com\fiap\appcarro\carro\controller\HomeController.class
