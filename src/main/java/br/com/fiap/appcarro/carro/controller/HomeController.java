@@ -10,7 +10,7 @@ public class HomeController {
 	
 	@GetMapping("/")
 	public String home(HttpServletRequest request) {
-		request.setAttribute("usuario", "Gustavo Daza Rodrigues e Anna Luiza Morais Romana");
+		request.setAttribute("usuario", "Atividade 27/04");
 		
 		return "home";
 	}
